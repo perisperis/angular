@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - v10.15.1
 dist: trusty
 sudo: false
 
@@ -14,12 +16,13 @@ install:
   - npm install -g yarn
 
 script:
-  - yarn build --base-href /app/
+  - ng build --prod --base-href /app/
   - mv dist/app/index.html dist/app/404.html
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/app
+  local-dir: ./dist/app
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
   on:
-branch: master
+    branch: master
