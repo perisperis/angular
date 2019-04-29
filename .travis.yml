@@ -19,6 +19,7 @@ install:
   - npm install -g yarn
 
 script:
+  - yarn add @angular-devkit/build-angular --dev
   - yarn build --prod --base-href
   - mv dist/app/index.html dist/app/404.html
 deploy:
