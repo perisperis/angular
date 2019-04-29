@@ -16,7 +16,7 @@ install:
   - npm install -g yarn
 
 script:
-  - ng build --prod --base-href /app/
+  - yarn build --prod --base-href /app/
   - mv dist/app/index.html dist/app/404.html
 deploy:
   provider: pages
@@ -26,3 +26,4 @@ deploy:
   keep-history: true
   on:
     branch: master
+  
