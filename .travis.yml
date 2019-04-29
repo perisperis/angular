@@ -8,6 +8,9 @@ branches:
   only:
   - master
 
+before_script:
+- npm install -g @angular/cli
+
 cache:
   directories:
     - node_modules
@@ -16,7 +19,7 @@ install:
   - npm install -g yarn
 
 script:
-  - yarn build --prod --base-href /app/
+  - yarn build --prod --base-href
   - mv dist/app/index.html dist/app/404.html
 deploy:
   provider: pages
