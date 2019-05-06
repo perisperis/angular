@@ -7,7 +7,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+//path: '/home/twitter',
+//component:     TwitterComponent,
+//data: { title: 'Hola List' }
+//}  
+                        ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

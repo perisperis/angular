@@ -48,11 +48,16 @@ export class TwitterComponent implements OnInit {
 	  
 	  console.log("searchcall");
 	  
-	  console.log(this.searchquery);
+	  console.log(this.bearertoken);
+//	  console.log(this.searchquery);
+//	  console.log(this.consumersecret);
+	  
 	  
 		this.rest.searchcall(this.searchquery,
 				this.bearertoken).subscribe((res : any[])=>{
+					
 			 let resSTR = JSON.stringify(res);
+			 console.log(resSTR);
 			 let resJSON = JSON.parse(resSTR);
 			 this.tweetsdata = resJSON.results;
 			 console.log(JSON.stringify(this.tweetsdata));
