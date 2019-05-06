@@ -1,0 +1,22 @@
+
+
+<!-- <input type="text" ng-model="consumerkey"  value="consumerkey"> -->
+<!-- <br/> -->
+<!-- <input type="text" ng-model="consumersecret"  value="consumersecret"> -->
+
+<input type="text" ng-model="bearertoken"  value="">
+<br/>
+
+
+<!-- <button type="button" class="btn btn-primary" (click)="makecall()">User Timeline</button> -->
+<!-- <br> -->
+<button type="button" class="btn btn-primary" (click)="searchcall()">Search</button>
+<!-- <br> -->
+<!-- <button type="button" class="btn btn-primary" (click)="favorites()">Favorites</button> -->
+<!-- <br> -->
+<!-- <button type="button" class="btn btn-primary" (click)="followers()">Followers</button> -->
+
+
+<div *ngFor="let item of tweetsdata" class="col s12 m7">
+	<p>{{item.text}}</p>
+</div>

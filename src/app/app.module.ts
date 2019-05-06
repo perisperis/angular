@@ -17,11 +17,13 @@ import { AppComponent } from './app.component';
 
 import { InstagramComponent } from './instagram/instagram.component';
 //import { GoogleDriveComponent } from './google-drive/google-drive.component';
-//import { TwitterComponent } from './twitter/twitter.component';
+import { TwitterComponent } from './twitter/twitter.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InstagramComponent,
+    TwitterComponent
   ],
   imports: [
             ButtonsModule.forRoot(),
@@ -29,7 +31,6 @@ import { InstagramComponent } from './instagram/instagram.component';
             ProgressbarModule.forRoot(),
             TabsModule.forRoot(),
             CarouselModule.forRoot(),
-    InstagramComponent,
     BrowserModule,
     AppRoutingModule
   ],
