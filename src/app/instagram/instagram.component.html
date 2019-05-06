@@ -1,0 +1,22 @@
+<h2 *ngIf="instagramUser" >{{instagramUser.data.full_name}}</h2>
+<h2 *ngIf="instagramUser" >{{instagramUser.data.website}}</h2>
+<a *ngIf="instagramUser" href="{{instagramUser.data.website}}">Login</a>
+<img *ngIf="instagramUser" src = "{{instagramUser.data.profile_picture}}"/>
+
+<img *ngIf="instagramActividad" src = "{{instagramActividad.data[0].images.low_resolution.url}}"/>
+<h2 *ngIf="instagramActividad" >{{instagramActividad.data[0].id}}</h2>
+
+  <input type="text" [(ngModel)] ="name">
+<!--   <button (click)="getToken()" type="button" class="btn btn-primary">Generate Link</button> -->
+<!--   <br/> -->
+<!--   <a *ngIf="link" href="{{link}}">Login</a> -->
+<!--   <br/> -->
+<!--   <input type="text" ng-model="access_token"  value="{{access_token}}"> -->
+<!--   <br/> -->
+  <button (click)="getAccessToken()" type="button" class="btn btn-primary">Perfil</button>
+  <br/>
+  <button (click)="getActivity()" type="button" class="btn btn-primary">Actividad</button>
+            
+       
+
+

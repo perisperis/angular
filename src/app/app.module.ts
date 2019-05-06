@@ -15,7 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
-
+import { InstagramComponent } from './instagram/instagram.component';
+//import { GoogleDriveComponent } from './google-drive/google-drive.component';
+//import { TwitterComponent } from './twitter/twitter.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { AppComponent } from './app.component';
             ProgressbarModule.forRoot(),
             TabsModule.forRoot(),
             CarouselModule.forRoot(),
-            
+    InstagramComponent,
     BrowserModule,
     AppRoutingModule
   ],
