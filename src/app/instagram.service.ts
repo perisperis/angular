@@ -7,7 +7,7 @@ import { map, catchError, tap } from 'rxjs/operators';
 
 const endpoint = 'https://www.instagram.com/oauth/authorize/';
 const api_instagram = 'https://api.instagram.com/v1/';
-const redirect_uri = 'https://peris.dev';
+const redirect_uri = 'https://peris.dev/angular';
 
 const response_type = '&redirect_uri='+redirect_uri+'&response_type=token&scope=likes+public_content';
 const users_self = api_instagram+'users/self/?access_token=';
