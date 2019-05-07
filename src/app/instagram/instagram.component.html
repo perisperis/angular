@@ -1,23 +1,134 @@
-<h2 *ngIf="instagramUser" >{{instagramUser.data.full_name}}</h2>
-<h2 *ngIf="instagramUser" >{{instagramUser.data.website}}</h2>
-<a *ngIf="instagramUser" href="{{instagramUser.data.website}}">Login</a>
-<img *ngIf="instagramUser" src = "{{instagramUser.data.profile_picture}}"/>
+<!-- <h2 *ngIf="instagramUser" >{{instagramUser.data.full_name}}</h2> -->
+<!-- <h2 *ngIf="instagramUser" >{{instagramUser.data.website}}</h2> -->
+<!-- <a *ngIf="instagramUser" href="{{instagramUser.data.website}}">Login</a> -->
+<!-- <img *ngIf="instagramUser" src = "{{instagramUser.data.profile_picture}}"/> -->
 
-<img *ngIf="instagramActividad" src = "{{instagramActividad.data[0].images.low_resolution.url}}"/>
-<h2 *ngIf="instagramActividad" >{{instagramActividad.data[0].id}}</h2>
+<!-- <img *ngIf="instagramActividad" src = "{{instagramActividad.data[0].images.low_resolution.url}}"/> -->
+<!-- <h2 *ngIf="instagramActividad" >{{instagramActividad.data[0].id}}</h2> -->
 
-  <input type="text" [(ngModel)] ="name">
-  <button (click)="getToken()" type="button" class="btn btn-primary">Generate Link</button>
-  <br/>
-  <a *ngIf="link" href="{{link}}">Login</a>
-  <br/>
-<!--   <input type="text" ng-model="access_token"  value="{{access_token}}"> -->
+
+<!-- <div *ngFor="" class="col s12 m7"> -->
+<!-- 	<img src = "{{item.images.low_resolution.url}}"/> -->
+<!-- 	<p>{{item.id}}</p> -->
+<!-- </div> -->
+
+<div style="text-align:center">
+	
+<!-- <button type="button" class="btn btn-primary" -->
+<!--         tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> -->
+<!--   Simple demo -->
+<!-- </button> -->
+
+
+<!--  <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']"> -->
+<!--     <div class="item" *ngFor="let item of instagramActividad.data; let index=index"> -->
+<!--       <img class="slide-image" src="{{item.images.low_resolution.url}}" > -->
+<!--       <div class="slide-text"> -->
+<!--         <h4>{{item.images.id}}</h4> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </owl-carousel> -->
+
+   <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+    <div class="item" *ngFor="let item of instagramActividad.data;let i= index">
+      <img class="slide-image" src="{{item.images.low_resolution.url}}" >
+      <div class="slide-text">
+        <h4>{{item.images.id}}</h4>
+      </div>
+    </div>
+  </owl-carousel>
+  
+  
+<!-- <carousel [itemsPerSlide]="itemsPerSlide" -->
+<!--           [singleSlideOffset]="singleSlideOffset" -->
+<!--           [noWrap]="!noWrap" -->
+<!--           [interval]="false" -->
+<!--           [startFromIndex]="5" -->
+<!--           (slideRangeChange)="onSlideRangeChange($event)"> -->
+<!--   <slide *ngFor="let slide of slides; let index=index"> -->
+<!--     <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;"> -->
+<!--     <div class="carousel-caption"> -->
+<!--       <h4>Slide {{index}}</h4> -->
+<!--     </div> -->
+<!--   </slide> -->
+<!-- </carousel> -->
+
+<!--    <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']"> -->
+<!--     <div class="item" *ngFor="let image of images;let i= index"> -->
+<!--       <img class="slide-image" src="{{image.image}}" > -->
+<!--       <div class="slide-text"> -->
+<!--         <h4>{{image.text}}</h4> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </owl-carousel> -->
+
+<!-- <div class="owl-carousel owl-theme"> -->
+<!--     <div class="item-video" data-merge="3"><a class="owl-video" href="https://vimeo.com/23924346"></a></div> -->
+<!--     <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div> -->
+<!--     <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div> -->
+<!--     <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a></div> -->
+<!--     <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div> -->
+<!--     <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div> -->
+<!--     <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div> -->
+<!--     <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div> -->
+<!-- </div> -->
+
+    
+<!--     <carousel > -->
+<!--       <slide *ngFor="let slide of slides; let index=index"> -->
+<!--         <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;"> -->
+<!--         <div class="carousel-caption"> -->
+<!--           <h4>Slide {{index}}</h4> -->
+<!--         </div> -->
+<!--       </slide> -->
+<!--     </carousel> -->
+    
+    
+<!--     <mv-slider  -->
+<!--     [(value)]="value"  -->
+<!--     [min]="1" [max]="100"  -->
+<!--     [enabled]="enabled"  -->
+<!--     (change)="change()"> -->
+<!--     </mv-slider> -->
+    
+    
+<!--     <input -->
+<!-- 	type="text" -->
+<!-- 	name="somename" -->
+<!-- 	data-provide="slider" -->
+<!-- 	data-slider-ticks="[1, 2, 3]" -->
+<!-- 	data-slider-ticks-labels='["short", "medium", "long"]' -->
+<!-- 	data-slider-min="1" -->
+<!-- 	data-slider-max="3" -->
+<!-- 	data-slider-step="1" -->
+<!-- 	data-slider-value="3" -->
+<!-- 	data-slider-tooltip="hide" -->
+<!-- > -->
+
+<!--     <owl-carousel [options]="mySlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" > -->
+<!-- 	 <div class="item" *ngFor="let item of instagramActividad.data; let index=index"> -->
+<!-- 	  <div> -->
+<!-- 	    <img src={{item.images.low_resolution.url}}/> -->
+<!-- 	  </div> -->
+<!-- 	 </div> -->
+<!-- 	</owl-carousel> -->
+
+
+
+</div>
+
+<!--   <input type="text" [(ngModel)] ="name"> -->
+<!--   <button (click)="getToken()" type="button" class="btn btn-primary">Generate Link</button> -->
 <!--   <br/> -->
-  <br/>
-  <button (click)="getAccessToken()" type="button" class="btn btn-primary">Instagram Perfil</button>
-    <br/>
-  <button (click)="getActivity()" type="button" class="btn btn-primary">Instagram Actividad</button>
-    <br/>
+<!--   <a *ngIf="link" href="{{link}}">Login</a> -->
+<!--   <br/> -->
+<!-- <!--   <input type="text" ng-model="access_token"  value="{{access_token}}"> -->
+<!-- <!--   <br/> --> 
+<!--   <br/> -->
+<!--   <button (click)="getAccessToken()" type="button" class="btn btn-primary">Instagram Perfil</button> -->
+<!--     <br/> -->
+<!--   <button (click)="getActivity()" type="button" class="btn btn-primary">Instagram Actividad</button> -->
+<!--     <br/> -->
             
        
 

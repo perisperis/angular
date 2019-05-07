@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+//import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 const routes: Routes = [
 //path: '/home/twitter',
@@ -15,7 +16,10 @@ const routes: Routes = [
                         ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)/*, CarouselModule.forRoot()*/],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+
+	  
+}

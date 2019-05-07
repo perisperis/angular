@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { setTheme } from 'ngx-bootstrap/utils';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Pedro';
+	
+	constructor() {
+	    setTheme('bs4'); // or 'bs4'
+	  }
+	
+
+//	title = 'OwlCarousel2 in Angular7 with Custom Navigation Arrows';
+	 
+
+  
 }

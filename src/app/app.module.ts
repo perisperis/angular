@@ -24,17 +24,18 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { OwlModule } from 'ngx-owl-carousel';
 //import { InstagramComponent } from './instagram/instagram.component';
 //import { GoogleDriveComponent } from './google-drive/google-drive.component';
 //import { TwitterComponent } from './twitter/twitter.component';
 
 import { CommonModule } from '@angular/common';
 
-
 import { InstagramComponent } from './instagram/instagram.component';
 //import { GoogleDriveComponent } from './google-drive/google-drive.component';
 import { TwitterComponent } from './twitter/twitter.component';
+import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 
 @NgModule({
@@ -54,9 +55,15 @@ import { TwitterComponent } from './twitter/twitter.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    OwlModule,
+    NgxBootstrapSliderModule,
+    TooltipModule.forRoot()
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+	
+}
