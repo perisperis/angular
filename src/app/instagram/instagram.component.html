@@ -30,7 +30,7 @@
 <!--   </owl-carousel> -->
 
    <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-    <div class="item" *ngFor="let item of instagramActividad.data;let i= index">
+    <div class="item" *ngFor="let item of instagramActividad;let i= index">
       <img class="slide-image" src="{{item.images.low_resolution.url}}" >
       <div class="slide-text">
         <h4>{{item.images.id}}</h4>

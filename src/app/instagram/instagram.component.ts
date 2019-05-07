@@ -25,7 +25,7 @@ export class InstagramComponent implements OnInit {
       name : string = "13114621023.041cf7e.40001f0b4cd64ef5858d78bd7ed63a17";
 	  link  : string = ""; 
       instagramUser  : object;
-      instagramActividad  : object;
+      instagramActividad  : JSON;
 
 		private productsObservable : Observable<any[]>; 
 
@@ -143,7 +143,7 @@ export class InstagramComponent implements OnInit {
 				 let resSTR = JSON.stringify(res);
 				 let resJSON = JSON.parse(resSTR);
 				 console.log(resSTR);
-				 this.instagramActividad = resJSON;
+				 this.instagramActividad = resJSON.data;
 			  });
 		      
 		  };
