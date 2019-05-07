@@ -142,7 +142,7 @@ export class InstagramComponent implements OnInit {
 			this.rest.getInstagramRecent(this.name).subscribe((res : any[])=>{
 				 let resSTR = JSON.stringify(res);
 				 let resJSON = JSON.parse(resSTR);
-				 console.log(resSTR);
+//				 console.log(resSTR);
 				 this.instagramActividad = resJSON.data;
 			  });
 		      

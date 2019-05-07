@@ -55,13 +55,13 @@ export class InstagramService {
 
 	getInstagramUser(access_token): Observable<any> {
 		let request_uri = users_self+access_token;
-		console.log(request_uri);
+//		console.log(request_uri);
 		return this.http.get(request_uri);//.pipe(map(this.extractData));
 	}
 	
 	getInstagramRecent(access_token): Observable<any> {
 		let request_uri = users_recent+access_token;
-		console.log(request_uri);
+//		console.log(request_uri);
 		return this.http.get(request_uri);//.pipe(map(this.extractData));
 	}
 	
