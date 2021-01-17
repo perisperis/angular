@@ -35,8 +35,7 @@
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./node_modules/owl.carousel/dist/owl.carousel.min.js"
 /*               "./node_modules/bootstrap-slider/dist/bootstrap-slider.min.js" */
-            ],
-            "es5BrowserSupport": true
+            ]
           },
           "configurations": {
             "production": {
